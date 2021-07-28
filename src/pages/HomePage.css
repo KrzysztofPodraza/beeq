@@ -1,0 +1,124 @@
+.main {
+  padding: 0;
+  margin: 0;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+}
+.list {
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+
+  list-style-type: none;
+  padding: 0;
+}
+.list_item {
+  max-width: 100%;
+  overflow-x: auto;
+  border-radius: 1rem;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+
+  border: 1px solid rgb(212, 212, 212);
+  font-size: x-large;
+  display: flex;
+  flex-direction: column;
+  color: #3b3b3b;
+  background-color: rgba(242, 242, 242, 0.7);
+  cursor: pointer;
+  transition: 300ms;
+}
+.list_item:hover {
+  transform: scale(1.02);
+  background-color: rgba(242, 242, 242, 0.8);
+}
+
+.spacer {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 2px;
+  background-color: rgb(207, 207, 207);
+}
+.header {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+}
+.addButton {
+  margin: auto;
+  margin-right: 0;
+  border-radius: 0.5rem;
+  height: 3rem;
+  width: 10rem;
+  font-size: large;
+  font-weight: 500;
+  color: #f2f2f2;
+  background-color: #185adb;
+  border: 0;
+}
+.addButton:hover {
+  cursor: pointer;
+  background-color: #184adb;
+}
+.bg_photo {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  object-fit: cover;
+}
+.spacer_desc {
+  width: 40%;
+  margin-left: 0;
+  margin-right: auto;
+  height: 1px;
+  background-color: rgb(158, 158, 158);
+}
+.desc {
+  display: flex;
+  flex-direction: column;
+}
+
+.desc_item {
+  font-size: smaller;
+  color: rgb(87, 87, 87);
+  animation-name: desc_item_animation;
+  animation-duration: 300ms;
+}
+@keyframes desc_item_animation {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@media only screen and (max-width: 625px) {
+  .list {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .header {
+    flex-direction: column;
+  }
+  .header_text {
+    text-align: center;
+  }
+  .addButton {
+    margin: auto;
+    margin-bottom: 1rem;
+  }
+  .spacer {
+    width: 100%;
+  }
+}
